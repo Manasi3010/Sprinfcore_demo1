@@ -1,7 +1,9 @@
 package com.code.spring;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
+@Component
 public class HelloSpringApp {
     public static void main(String[] args) {
         // load the spring config file
@@ -9,7 +11,7 @@ public class HelloSpringApp {
 
         // retrieve bean from spring container
 
-        Coach theCoach = context.getBean("myCoach", Coach.class);
+        Coach theCoach = context.getBean("tennisCoach", Coach.class);
 
         // call method on the bean
         System.out.println(theCoach.getDailyFortune());
